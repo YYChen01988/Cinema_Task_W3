@@ -61,6 +61,13 @@ class Customer
    @wallet -= price['sum'].to_i
   end
 
+  def ticket_count()
+    sql = "SELECT COUNT(tickets.*) FROM tickets WHERE tickets.customer_id = $1"
+    values = [@id]
+    tickets_count = SqlRunner.run(sql, values)[0]
+    return tickets_count['count'].to_i
+  end
+
 
 
 

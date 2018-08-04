@@ -54,7 +54,12 @@ class Film
     return customers.map{|customer| Customer.new(customer)}
   end
 
-
+  def customer_count()
+    sql = "SELECT COUNT(DISTINCT(tickets.customer_id)) FROM tickets WHERE film_id = $1"
+    values = [@id]
+    customer_count = SqlRunner.run(sql, values)[0]
+    return customer_count['count'].to_i
+  end
 
 
 end

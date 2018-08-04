@@ -15,6 +15,10 @@ customer1.save()
 customer2 = Customer.new({ 'name' => 'Ken', 'wallet' => 100})
 customer2.save()
 
+customer3 = Customer.new({ 'name' => 'Lucy', 'wallet' => 150})
+customer3.save()
+
+
 
 
 
@@ -44,6 +48,10 @@ ticket4.save()
 
 ticket5 = Ticket.new({ 'customer_id' => customer2.id, 'film_id' => film3.id})
 ticket5.save()
+
+ticket6 = Ticket.new({ 'customer_id' => customer2.id, 'film_id' => film3.id})
+ticket6.save()
+
 
 
 
