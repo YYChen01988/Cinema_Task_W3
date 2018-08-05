@@ -54,6 +54,7 @@ ticket1 = Ticket.new({
   'screening_id' => screening1.id
   })
 ticket1.save()
+customer1.fee_charge(film1.price)
 
 ticket2 = Ticket.new({
   'customer_id' => customer2.id,
@@ -61,6 +62,8 @@ ticket2 = Ticket.new({
   'screening_id' => screening2.id
   })
 ticket2.save()
+customer2.fee_charge(film2.price)
+
 
 ticket3 = Ticket.new({
   'customer_id' => customer1.id,
@@ -68,6 +71,8 @@ ticket3 = Ticket.new({
   'screening_id' => screening3.id
   })
 ticket3.save()
+customer1.fee_charge(film2.price)
+
 
 ticket4 = Ticket.new({
   'customer_id' => customer2.id,
@@ -75,6 +80,8 @@ ticket4 = Ticket.new({
   'screening_id' => screening1.id
   })
 ticket4.save()
+customer2.fee_charge(film1.price)
+
 
 ticket5 = Ticket.new({
   'customer_id' => customer2.id,
@@ -82,6 +89,8 @@ ticket5 = Ticket.new({
   'screening_id' => screening3.id
   })
 ticket5.save()
+customer2.fee_charge(film3.price)
+
 
 ticket6 = Ticket.new({
   'customer_id' => customer2.id,
@@ -89,6 +98,7 @@ ticket6 = Ticket.new({
   'screening_id' => screening1.id
   })
 ticket6.save()
+customer2.fee_charge(film3.price)
 
 
 
