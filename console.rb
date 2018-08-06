@@ -13,11 +13,11 @@ Customer.delete_all()
 Screening.delete_all()
 
 
-screening1 = Screening.new({ 'screen_time' => '10:00'})
+screening1 = Screening.new({ 'screen_time' => '10:00', 'screen_size'=> 1})
 screening1.save()
-screening2 = Screening.new({ 'screen_time' => '12:00'})
+screening2 = Screening.new({ 'screen_time' => '12:00', 'screen_size'=> 14})
 screening2.save()
-screening3 = Screening.new({ 'screen_time' => '14:00'})
+screening3 = Screening.new({ 'screen_time' => '14:00', 'screen_size'=> 11})
 screening3.save()
 
 

@@ -17,7 +17,8 @@ CREATE TABLE films (
 
 CREATE TABLE screenings (
   id SERIAL PRIMARY KEY,
-  screen_time VARCHAR(255)
+  screen_time VARCHAR(255),
+  screen_size INT
 );
 
 CREATE TABLE tickets(

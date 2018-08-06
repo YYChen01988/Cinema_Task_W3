@@ -32,6 +32,19 @@ class Customer
     SqlRunner.run(sql, values)
   end
 
+  def fee_charge(fee_charge)
+   @wallet -= fee_charge
+   self.update()
+
+
+   # sql = "SELECT SUM(films.price) FROM films INNER JOIN tickets ON films.id = tickets.film_id WHERE tickets.customer_id = $1"
+   # values = [@id]
+   # price = SqlRunner.run(sql, values)[0]
+   # @wallet -= price['sum'].to_i
+
+
+  end
+
 
   def self.all()
     sql = "SELECT * FROM customers"
@@ -54,10 +67,6 @@ class Customer
     return films.map{|film| Film.new(film)}
   end
 
-  def fee_charge(fee_charge)
-   @wallet -= fee_charge
-   self.update()
-  end
 
   def ticket_count()
     sql = "SELECT COUNT(tickets.*) FROM tickets WHERE tickets.customer_id = $1"
